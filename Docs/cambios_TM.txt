@@ -1,0 +1,8 @@
+- Que se pueda asignar los parámetros que juzgará cada juez
+- Adaptar la pantalla de la tablet para que entren 4 caracteres (TQ1.1) si es posible en dos líneas
+- Añadir un globo que al pulsar encima de (TQ1.1) te diga la descripción del parámetro
+- Adaptar las hojas de resultados para todos los parámetros y poner el nombre de la pareja en la hoja
+- Si es posible que se imprima la hoja con el resumen de los resultados automáticamente al recibir todos los datos de los jueces
+
+20m
+1h

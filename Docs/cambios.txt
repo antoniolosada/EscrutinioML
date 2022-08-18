@@ -1,0 +1,3 @@
+regen horas horario
+ext archivo coordinador pista html
+los calentamientos no salen en el horario

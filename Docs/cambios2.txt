@@ -1,0 +1,8 @@
+Mejoras Match:
+
+ampliar campo del nombre del parámetro para que quepan dos líneas o 6 caracteres
+probar si caben los literales dentro del os los botones apple
+Asignar los parámetros que juzga cada uno de los jueces
+Impresión automática una vez introducidas todas las puntuaciones
+Corrección de la hoja de impresión para que aparezcan las puntuaciones inexistentes de los jueces en blanco
+En la hoja de impresión debe aparecer el dorsal y el nombre de la pareja

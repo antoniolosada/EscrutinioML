@@ -1,0 +1,60 @@
+Running IIS on Windows XP Home Edition?
+By 15 Seconds Discussion List	Rating: 4.1 out of 5
+Rate this article
+
+# print this article
+# email this article to a colleague
+# suggest an article
+
+Philippe Asks:
+
+I have now replaced my machine with a Windows XP Home Edition PC, which does not include PWS or any equivalent server product. Which server could I run on XP HE? I heard of Apache, but I do not know if it runs on XP HE or if it even supports ASP.
+
+15Seconds DL Responds:
+
+Editor's note: this is not a supported or tested solution. Attempt at your own risk. (see MSKB: Q304197).
+
+To quote http://groups.google.com/groups?selm=3c3c9b9d.518663173%40news:
+
+    "General HOWTO for running IIS in Windows XP Home Edition.
+
+    by Richard Sandoz - Certified Java Programmer
+
+    (1) locate and edit the file C:\WINDOWS\INF\SYSOC.INF
+
+    (2) locate a section called [Components]
+
+    (3) find a line like this:
+    iis=iis.dll,OcEntry,iis.inf,hide,7
+
+    (4) change it to this (the iis cab in the i386 xp home folder looks to be nothing) iis=iis2.dll,OcEntry,iis2.inf,,7
+
+    (some sort of ms caching thing keeps sticking back iis.dll when I try to nuke it. quickly renaming and making hidden dir called iis.dll seems to thwart, but not worth it, so iis2.dll is good enough)
+
+    (5) I grabbed the iis.dl_ and iis.in_ from win2k advanced server cd.
+
+    I would guess similar techniques would work from W98, FP, etc. Use "EXPAND IIS.DL_ IIS2.DLL" from a command prompt Same for IIS2.INF, place IIS2.INF in C:\WINDOWS\INF and IIS2.DLL in C:\WINDOWS\SYSTEM32\SETUP
+
+    (6) Now when I did "add windows programs" from the control panel's add new programs, I had IIS options and I could even check em off. yippee - could not check em off from my xppro cd :(((
+
+    I just went with the defaulted ones though (all i needed was iis web server)
+
+    (7) It will prompt you for files. Get em from MS XP Home CDs, Adv Server CDs, C:\WINNT\SYSTEM32\INETSRV, C:\WINDOWS\I386, etc. (It will tell you the file it needs, you just need to have a searcher going, probably the CDs will have all you need)
+
+    (8) You can get to your IIS from Control Panel's Administrative Programs. I stuck in an index.html file and reconfigure IIS to work like this.
+    No go :(((
+    I right clicked on my inetpub folder and did something with shared folders.
+    No go :(((
+    I looked at the event viewer and saw the error of my ways. Go to IIS and goto Directory Security tab and click Edit button and Browse for the user setup on my laptop.
+
+    (9) Yippee, hello world from http://localhost
+
+    I won't support this solution unless paid to. I am an out of work developer looking for work.
+
+    I bought a Toshiba 5005 laptop which came with XP home. I then bought Win XP Professional. I have bunches of CDs from when I was a MSDN subscriber. From a general search on the internet I found contradictions.
+
+    Microsoft says you need professional XP to do IIS period. q310090 was yanked from their site which had the "workaround" for this.
+
+    When I tried to setup XP upgrade to pro, my laptop rebooted and hung on an xp logo with an animated graphic. I have verified this to be the case with others as well. Upgrading to xp pro isn't an option for this laptop." 
+
+This conversation string was taken from the 15Seconds ASP Listserv on 1/18/02. If you have an ASP-related question or would like to share some of your knowledge with others, you may join the list by clicking here.
